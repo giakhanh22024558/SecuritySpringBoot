@@ -2,6 +2,7 @@ package com.example.securitydemo.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Set;
 
@@ -13,17 +14,17 @@ public class User {
     private Long id;
 
     // Getter for username
-    @Getter
+    @Getter @Setter
     @Column(nullable = false, unique = true)
     private String username;
 
     // Getter for password
-    @Getter
+    @Getter @Setter
     @Column(nullable = false)
     private String password;
 
     // Getter for roles
-    @Getter
+    @Getter @Setter
     @ElementCollection(fetch = FetchType.EAGER)
     @Column(name = "role")
     private Set<String> roles;

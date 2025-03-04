@@ -29,6 +29,8 @@ public class WebSecurityConfig {
                 .csrf(csrf -> csrf.disable())  // Disable CSRF for APIs
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/**").permitAll()  // Public routes for authentication
+                        .requestMatchers("/api/user/profile", "/api/user/update").hasRole("USER")  // Chỉ USER mới truy cập được
+                        .requestMatchers("/api/admin/dashboard").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

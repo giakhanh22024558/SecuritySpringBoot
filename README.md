@@ -1,4 +1,9 @@
 
+api require correct role
+
+![image](https://github.com/user-attachments/assets/1a41d543-5d89-4eaa-b1cb-c91f2df6457e)
+
+
 Rest api require jwt before send
 
 ![image](https://github.com/user-attachments/assets/3bc5b70a-51a2-4629-94d6-731d264121bc)
